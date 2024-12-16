@@ -1,10 +1,5 @@
 def call() {
-    withSonarQubeEnv('SonarQube') {
-        sh '''
-            sonar-scanner \
-            -Dsonar.projectKey=salary \
-            -Dsonar.projectName=salary \
-            -Dsonar.java.binaries=target
-        '''
-    }
+     withSonarQubeEnv('SonarQube') {
+                        sh "usr/bin/mvn clean package -Dmaven.test.skip=true sonar:sonar"
+                    }
 }
