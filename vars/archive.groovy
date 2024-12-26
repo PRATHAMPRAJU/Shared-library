@@ -1,7 +1,7 @@
 def call() {
-    // Dependency check report archiving
+    // Dependency 
     archiveArtifacts artifacts: 'target/dependency-check-report.html', allowEmptyArchive: true, includes: '**/*.html'
 
-    // DAST report archiving
+    // DAST 
     archiveArtifacts artifacts: 'nikto_report.html', allowEmptyArchive: true, includes: '**/*.html'
 }
